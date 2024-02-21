@@ -7,6 +7,7 @@ INCLUDE(UseLATEX.cmake)
 SET(parts
     espd.cls # Класс настроек ЕСПД
     preamble.tex 
+    algo.tex
     abbreviations.tex
     src/аббревиатуры.tex    
     src/referat.tex
@@ -15,7 +16,7 @@ SET(parts
     src/средство_исследования.tex
     src/результаты.tex
     src/заключение.tex
-
+    src/приложение1.tex
 )
 ADD_LATEX_DOCUMENT(
     main.tex

@@ -1,0 +1,84 @@
+\newpage
+\attachment{(обязательное)}{Алгоритм вычисления} \label{attachement:Алгоритм_вычисления}
+
+\setcounter{equation}{0} % Сброс нумерации формул
+\setcounter{table}{0} % Сброс нумерации таблиц
+\setcounter{illustration}{0} % Сброс нумерации рисунков
+\setcounter{section}{0} % Сброс нумерации разделов
+
+\begin{spacing}{0.8} % Поскольку стоит растяжение межстрочного интервала в тексте, то тут надо сжать
+	\begin{algorithm}[H] % H - вставить ЗДЕСЬ, без выравнивания по тексту	
+		\caption{\raggedright Пример алгоритма}
+		\label{alg:Examples}
+		\begin{algorithmic}[1]
+			\State $X=45$
+			\For{\textbf{от} $i=0$ \textbf{до} 5}\Comment{sum(i)}
+			\State $X=X-2$
+			\State \Call {Find}{$X$}
+			\While{$Y_2<5$}		
+			\If{$quality\ge 9$}
+			\State $a\gets perfect$
+			\ElsIf{$quality\ge 7$}
+			\State $a\gets good$
+			\ElsIf{$quality\ge 5$}
+			\State $a\gets medium$
+			\ElsIf{$quality\ge 3$}
+			\State $a\gets bad$
+			\Else
+			\State $a\gets unusable$
+			\EndIf		
+			\EndWhile
+			\State \Return $X$
+			\BeginBlock Прибавление 2: \Comment Комментарий
+			\State $X+=2$
+			\EndBlock			
+			\EndFor
+			\ForAll{траекторий}
+			\ForAll{вариантов траекторий}
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			
+			\algstore{bkbreak}
+		\end{algorithmic}	
+	\end{algorithm}
+\end{spacing}
+
+\pagebreak
+Приводим пример разрыва длинного алгоритма в ручном режиме. Автоматически такое сделать не получится, поэтому так.
+
+\begin{spacing}{0.8} % Поскольку стоит растяжение межстрочного интервала в тексте, то тут надо сжать
+	\addtocounter{algorithm}{-1} 
+	\captiondelim{~}
+	\floatname{algorithm}{\textit{Продолжение алгоритма}}
+	\begin{algorithm}[H]
+		%	\caption{\raggedright Пример алгоритма (продолжение)}	
+		%	\caption{\raggedright Продолжение алгоритма}
+		\caption{\raggedright~}
+		\begin{algorithmic}[1]
+			
+			\algrestore{bkbreak}
+			
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\State Statement
+			\EndFor
+			\EndFor
+		\end{algorithmic}
+	\end{algorithm}
+\end{spacing}
+
