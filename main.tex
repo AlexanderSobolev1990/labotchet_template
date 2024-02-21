@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \file       main.tex
+% \brief      Лабораторный отчет
+% \date       21.02.24 - создан
+% \author     Соболев А.А.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[technicaltask]{../espd}
+\documentclass[lab]{espd}
+\input{preamble.tex} % Преамбула
+\graphicspath{{images/}}
+\begin{document} % Начало документа
+\clubpenalty=10000  % Это костыль против
+\widowpenalty=10000 % "висячих" строк
+\righthyphenmin=200 % Избавляемся
+{\sloppy	        % от переносов слов
+\makeapprovallab{} % Титульный лист
+
+{
+\input{src/referat.tex} 
+}
+
+{
+%\cleardoublepage
+%\phantomsection
+\pdfbookmark[1]{\wordcontents}{toc}
+\tableofcontents % Содержание
+}
+
+{
+% Перечень сокращений
+%\cleardoublepage
+%\phantomsection
+\input{src/аббревиатуры.tex}
+}
+
+%%
+%% Дальше пошли разделы
+%%
+%\cleardoublepage
+%\phantomsection
+\input{src/введение.tex} 
+\input{src/объект_исследования.tex} 
+\input{src/средство_исследования.tex} 
+\input{src/результаты.tex} 
+\input{src/заключение.tex} 
+
+\vspace{1cm}
+%\makeaftersignatures{}
+
+%
+% Перечень литературы
+\cleardoublepage
+\phantomsection
+\bibliography{bibliography}
+}
+\end{document}
